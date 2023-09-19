@@ -35,3 +35,14 @@ test('button changes text when clicked', () => {
   fireEvent.click(colorButton);
   expect(colorButton).toHaveTextContent('Change to red');
 });
+
+test('Initial conditions', () => {
+  render(<App />);
+  const colorButton = screen.getByRole('button', { name: 'Change to blue' });
+
+  expect(colorButton).toBeEnabled();
+
+  const checkBox = screen.getByRole('checkbox');
+
+  expect(checkBox).not.toBeChecked();
+})
