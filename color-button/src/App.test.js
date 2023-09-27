@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { logRoles } from '@testing-library/react';
 import App from './App';
+import { quntityOfLetters } from './App'
 
 test('button has correct initial color', () => {
   const { container } = render(<App />);
@@ -46,3 +47,12 @@ test('Initial conditions', () => {
 
   expect(checkBox).not.toBeChecked();
 })
+
+describe('Quantity of letters funcionalitty', () => {
+  test('with a single word', () => {
+    expect(quntityOfLetters('Hola')).toBe(4);
+  });
+  test('with two words', () => {
+    expect(quntityOfLetters('Hola chau')).toBe(9);
+  });
+});

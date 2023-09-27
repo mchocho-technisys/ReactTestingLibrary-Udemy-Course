@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import './App.css';
 
+export const quntityOfLetters = (word) => {
+  return word.length;
+};
+
 function App() {
   const [backgroundColor, setBackgroundColor] = useState('red');
   const [text, setText] = useState('Change to blue');
