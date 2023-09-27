@@ -8,7 +8,8 @@ function App() {
       <button disabled={buttonDisabled}>
         Boton
       </button>
-      <input type='checkbox' onClick={() => setButtonDisabled(!buttonDisabled)}/>
+      <input id='checkbox' type='checkbox' onClick={() => setButtonDisabled(!buttonDisabled)}/>
+      <label htmlFor='checkbox'>Disable button</label>
     </div>
   );
 }
